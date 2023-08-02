@@ -1,0 +1,117 @@
+:root {
+  --blue: #1c77c3;
+  --light-blue: #39a9db;
+  --lighter-blue: #40bcd8;
+  --orange: #f39237;
+  --red: #d63230;
+  scroll-behavior: smooth;
+}
+
+/* Animation Key Frames*/
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+/* set up the body */
+body {
+  margin: 0;
+  font-family: "PT Mono", monospace;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(10, 10, 30);
+  color: white;
+}
+
+section {
+  margin: 0;
+}
+
+/* Intro section and its children */
+
+.intro__section {
+  display: grid;
+  height: 80vh;
+  width: 100%;
+  margin: 0;
+  place-items: center;
+  text-align: right;
+  position: relative;
+}
+
+.intro__section > h1 {
+  font-size: clamp(2em, 2vw, 4em);
+  font-weight: 400;
+  margin: 0;
+  padding: 20px;
+}
+
+.magic {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--blue),
+    var(--light-blue),
+    var(--lighter-blue),
+    var(--blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-size: 0.75em;
+  background-size: 200%;
+}
+
+.intro__section > a {
+  color: white;
+  margin: 0;
+  position: absolute;
+  font-size: 2em;
+}
+
+.intro__section > a:first-child {
+  top: 10%;
+  left: 10%;
+}
+
+.intro__section > a:nth-child(2) {
+  top: 10%;
+  left: 20%;
+}
+
+.intro__section > a:nth-child(3) {
+  top: 92%;
+  animation: flip 3s ease-in-out 10;
+}
+/* projects section and children */
+
+.projects__section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project__card {
+  background-color: var(--red);
+  height: 8vw;
+  aspect-ratio: 1/1;
+}

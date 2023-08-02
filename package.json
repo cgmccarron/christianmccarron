@@ -1,0 +1,19 @@
+{
+  "name": "christianmccarron",
+  "version": "1.0.0",
+  "description": "Portfolio Porject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgmccarron/christianmccarron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cgmccarron/christianmccarron/issues"
+  },
+  "homepage": "https://github.com/cgmccarron/christianmccarron#readme"
+}
