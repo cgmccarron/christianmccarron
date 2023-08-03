@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap"
       rel="stylesheet"
     />
+    <script src="./script.js"></script>
     <script
       src="https://kit.fontawesome.com/650bd98b48.js"
       crossorigin="anonymous"
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Christian McCarron</title>
   </head>
-  <body>
+  <body data-nav="false">
     <section class="intro__section">
       <a href="https://github.com/cgmccarron"
         ><i class="fa-brands fa-github"></i
@@ -32,9 +33,15 @@
       ></a>
     </section>
     <section class="projects__section" id="projects">
-      <div class="project__card">1</div>
-      <div class="project__card">2</div>
-      <div class="project__card">3</div>
+      <div class="project__cards">
+        <div class="project__card">1</div>
+        <div class="project__card">2</div>
+        <div class="project__card">3</div>
+      </div>
+      <button id="nav-toggle" type="button" onClick="toggleNav()">
+        <i class="open fa-solid fa-chevron-up button-icon"></i>
+        <i class="close fa-solid fa-chevron-down button-icon"></i>
+      </button>
     </section>
   </body>
 </html>

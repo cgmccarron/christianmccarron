@@ -58,7 +58,7 @@ section {
 }
 
 .intro__section > h1 {
-  font-size: clamp(2em, 2vw, 4em);
+  font-size: clamp(2em, 8vw, 4em);
   font-weight: 400;
   margin: 0;
   padding: 20px;
@@ -105,13 +105,62 @@ section {
 
 .projects__section {
   height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  width: 100vw;
+  margin: 0px;
+  position: relative;
+  z-index: 2;
 }
 
-.project__card {
+#nav-toggle {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  background-color: var(--orange);
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+  z-index: 3;
+}
+
+#nav-toggle:hover {
+  transform: translateX(-50%) scale(1.08);
+}
+
+#nav-toggle:active {
+  transform: translateX(-50%) scale(0.92);
+}
+
+#nav-toggle > .button-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) scale(0.9);
+  color: white;
+  font-size: 1.75rem;
+  opacity: 0;
+  transition: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+
+body:not([data-nav="true"]) > .projects__section > #nav-toggle:hover > .open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body[data-nav="true"] > .projects__section > #nav-toggle > .close {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body[data-nav="true"] > .projects__section > #nav-toggle {
   background-color: var(--red);
-  height: 8vw;
-  aspect-ratio: 1/1;
 }
