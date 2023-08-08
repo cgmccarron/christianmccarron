@@ -6,27 +6,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/650bd98b48.js"
       crossorigin="anonymous"
+      defer
     ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Christian McCarron</title>
   </head>
   <body data-nav="false">
     <section class="intro__section">
-      <a href="https://github.com/cgmccarron"
+      <a href="https://github.com/cgmccarron" target="_blank"
         ><i class="fa-brands fa-github"></i
       ></a>
       <!-- <a href="https://github.com/cgmccarron"
         ><i class="fa-solid fa-address-book"></i
       ></a> -->
       <h1>
-        Christian McCarron<span class="magic"><br />Web Developer </span>
+        <span class="hacker-word" data-name="Christian McCarron"
+          >Christian McCarron</span
+        ><span class="magic"><br />Web Developer </span>
       </h1>
       <a href="#projects" id="arrow-down"
         ><i class="fa-solid fa-arrow-down"></i
@@ -34,10 +37,62 @@
     </section>
     <section class="projects__section" id="projects">
       <div class="project__cards">
-        <div class="project__card">1</div>
-        <div class="project__card">2</div>
-        <div class="project__card">3</div>
+        <div class="project__card" id="project-one">
+          <div class="project__card__bottom">
+            A facebook like site built for the Odin Project using Node, React,
+            and MongoDB
+          </div>
+        </div>
+        <div class="project__card" id="project-two"></div>
+        <div class="project__card" id="project-three"></div>
       </div>
+      <nav>
+        <div id="nav-links">
+          <a class="nav__link" href="#">
+            <h2 class="nav__link__label rubik-font">About</h2>
+            <img
+              class="nav__link__image"
+              src="https://media.licdn.com/dms/image/C4D03AQH1yMD3NzYDDQ/profile-displayphoto-shrink_800_800/0/1517493780761?e=1697068800&v=beta&t=LYY6E_100AsUHdS36mdKcL45Qj-bYkLC0k67VbZ8oLk"
+            />
+          </a>
+          <a class="nav__link" href="#">
+            <h2 class="nav__link__label rubik-font">Contact</h2>
+            <img
+              class="nav__link__image"
+              src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+            />
+          </a>
+          <a class="nav__link" href="#">
+            <h2 class="nav__link__label rubik-font">Facebook Clone</h2>
+            <img
+              class="nav__link__image"
+              src="https://plus.unsplash.com/premium_photo-1683977922495-3ab3ce7ba4e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+            />
+          </a>
+          <a class="nav__link" href="#">
+            <h2 class="nav__link__label rubik-font">Facebook Clone</h2>
+            <img
+              class="nav__link__image"
+              src="https://plus.unsplash.com/premium_photo-1683977922495-3ab3ce7ba4e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+            />
+          </a>
+          <a class="nav__link" href="#">
+            <h2 class="nav__link__label rubik-font">Facebook Clone</h2>
+            <img
+              class="nav__link__image"
+              src="https://plus.unsplash.com/premium_photo-1683977922495-3ab3ce7ba4e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+            />
+          </a>
+          <a class="nav__link" href="#">
+            <h2 class="nav__link__label rubik-font">Facebook Clone</h2>
+            <img
+              class="nav__link__image"
+              src="https://plus.unsplash.com/premium_photo-1683977922495-3ab3ce7ba4e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+            />
+          </a>
+        </div>
+      </nav>
+
       <button id="nav-toggle" type="button" onClick="toggleNav()">
         <i class="open fa-solid fa-chevron-up button-icon"></i>
         <i class="close fa-solid fa-chevron-down button-icon"></i>
