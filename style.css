@@ -266,6 +266,13 @@ body[data-nav="true"] > .projects__section > nav > #nav-links {
   object-fit: cover;
 }
 
+/* Below is the About.html css!!! */
+.about_section {
+  width: 100vw;
+  height: 45vh;
+  margin: 0;
+}
+
 @media screen and (max-width: 600px) {
   nav {
     overflow-y: scroll;
