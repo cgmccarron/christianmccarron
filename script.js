@@ -34,3 +34,21 @@ hackerwords.forEach((word) => {
     }, 30);
   };
 });
+
+const aboutSections = document.querySelectorAll(".about_section");
+console.log(aboutSections);
+const gradient = document.querySelector(".gradient");
+
+const handleOnMove = (e, section) => {
+  let rect = section.getBoundingClientRect();
+
+  let x = e.clientX - rect.left;
+  let y = e.clientY - rect.top;
+
+  gradient.style.setProperty("--x", `${x}px`);
+  gradient.style.setProperty("--y", `${y}px`);
+};
+
+aboutSections.forEach((section) => {
+  section.onmousemove = (e) => handleOnMove(e, section);
+});

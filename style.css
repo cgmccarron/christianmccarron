@@ -268,9 +268,31 @@ body[data-nav="true"] > .projects__section > nav > #nav-links {
 
 /* Below is the About.html css!!! */
 .about_section {
+  postion: relative;
   width: 100vw;
   height: 45vh;
   margin: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+
+.about_lower {
+  flex: 1;
+}
+
+.gradient{
+  --x: 0;
+  --y: 0;
+  position: absolute;
+  background: white;
+  opacity: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: var(--y);
+  left: var(--x);
 }
 
 @media screen and (max-width: 600px) {
